@@ -30,9 +30,6 @@ EOF
     
 pip3 install -r requirements.txt
 
-
-wget https://www.python.org/static/img/python-logo.png && \
-    mv python-logo.png pytorch/image.jpg
 # Install and start code server
 curl -fsSL https://code-server.dev/install.sh | sh
 code-server --bind-addr 0.0.0.0:9000
