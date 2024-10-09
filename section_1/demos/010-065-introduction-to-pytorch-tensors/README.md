@@ -1,4 +1,4 @@
-# Demos for 010-065-introduction-to-pytorch-tensors
+# Demo for 010-065-introduction-to-pytorch-tensors
 ```bash
 git clone https://github.com/kodekloudhub/PyTorch.git
 ```

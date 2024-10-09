@@ -2,8 +2,6 @@
 
 # Set hostname
 hostname pytorch
-# Clone the repo
-git clone https://github.com/kodekloudhub/PyTorch.git
 
 # data directory
 mkdir -pv PyTorch/data
