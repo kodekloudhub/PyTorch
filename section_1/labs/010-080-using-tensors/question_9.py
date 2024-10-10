@@ -1,5 +1,5 @@
 """
-
+If a GPU device exists on the machine, set the device to use it. If a GPU is not available the set the device to use the CPU.
 """
 import torch
 
