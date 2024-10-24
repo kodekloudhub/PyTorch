@@ -4,5 +4,5 @@ git clone https://github.com/kodekloudhub/PyTorch.git
 ```
 
 ```bash
-bash PyTorch/section_2/labs/030-datasets-and-dataloaders/setup.sh
+bash PyTorch/section_2/labs/020-030-datasets-and-dataloaders/setup.sh
 ```
