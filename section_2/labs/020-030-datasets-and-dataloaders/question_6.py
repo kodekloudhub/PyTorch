@@ -9,4 +9,3 @@ transformations = torchvision.transforms.Compose([torchvision.transforms.ToTenso
 
 # Create a dataset using the images folder called cd_dataset.
 ____ = ____.____._____(____=____, transform=transformations)
-
