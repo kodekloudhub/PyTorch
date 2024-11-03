@@ -14,7 +14,7 @@ apt-get update && \
 apt-get install -y ffmpeg libsm6 libxext6 unzip
 
 # Unzip the data
-unzip data.zip -d ./
+unzip PyTorch/data.zip -d ./
 
 # Activate python environment
 python3 -m venv venv
