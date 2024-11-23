@@ -23,7 +23,7 @@ class FakeNet(nn.Module):
         return x
 
 
-def model(pretrained = False, **kwargs): 
+def fake_model(pretrained = False, **kwargs): 
     """
         FakeNet model
         pretrained (bool): kwargs, load pretrained weights into the model
