@@ -1,14 +1,17 @@
+# Define dependencies
 dependencies = ['torch']
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.hub import load_state_dict_from_url
 
+# Dictionary point to the URL of the models
 models_url = {
     'fake_model': 'https://github.com/kodekloudhub/PyTorch/raw/refs/heads/main/section_3/demos/030-105-additional-training-methods/model_state_dict.pt'
 }
 
 
+# Model Class
 class FakeNet(nn.Module):
     def __init__(self):
         super(FakeNet, self).__init__()
@@ -23,6 +26,7 @@ class FakeNet(nn.Module):
         return x
 
 
+# Entrypoint to our fake_model
 def fake_model(pretrained = False, **kwargs): 
     """
         FakeNet model
