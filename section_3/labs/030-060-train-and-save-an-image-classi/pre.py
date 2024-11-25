@@ -3,6 +3,7 @@ This file is used to create Datasets, DataLoaders and Transformations we already
 """
 import pandas as pd
 import os
+import torch
 from torch.utils.data import Dataset
 from PIL import Image
 from torchvision.transforms import v2
@@ -40,7 +41,8 @@ train_transform = v2.Compose([
     v2.Resize((128, 128)),
     v2.RandomRotation(degrees=30),
     v2.RandomHorizontalFlip(p=.5),
-    v2.ToTensor(),
+    v2.ToImage(), 
+    v2.ToDtype(torch.float32, scale=True),
     v2.Normalize(mean=[0.485, 0.456, 0.406], 
                  std=[0.229, 0.224, 0.225])
 ])
@@ -62,7 +64,8 @@ train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 # Validation Transformations
 val_transform = v2.Compose([
     v2.Resize((128, 128)),
-    v2.ToTensor(),
+    v2.ToImage(), 
+    v2.ToDtype(torch.float32, scale=True),
     v2.Normalize(mean=[0.485, 0.456, 0.406], 
                  std=[0.229, 0.224, 0.225])
 ])
