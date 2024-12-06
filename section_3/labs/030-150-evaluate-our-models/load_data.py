@@ -37,7 +37,7 @@ label_encoding = {"malignant": 0, "benign": 1}
 
 # Transformations
 test_transform = v2.Compose([
-    v2.Resize((128, 128)),
+    v2.Resize((224, 224)),
     v2.ToImage(), 
     v2.ToDtype(torch.float32, scale=True),
     v2.Normalize(mean=[0.485, 0.456, 0.406], 
