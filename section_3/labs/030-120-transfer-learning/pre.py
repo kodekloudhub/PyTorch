@@ -38,7 +38,7 @@ label_encoding = {"malignant": 0, "benign": 1}
 
 # Training Transformations
 train_transform = v2.Compose([
-    v2.Resize(224),
+    v2.Resize(224, 224),
     v2.RandomRotation(degrees=30),
     v2.RandomHorizontalFlip(p=.5),
     v2.ToImage(), 
