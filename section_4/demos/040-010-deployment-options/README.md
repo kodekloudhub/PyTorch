@@ -1,4 +1,4 @@
-# Lab for 030-120-transfer-learning
+# Lab for 040-010-deployment-options
 ```bash
 git clone https://github.com/kodekloudhub/PyTorch.git
 ```
