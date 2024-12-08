@@ -1,0 +1,5 @@
+pillow==10.4.0
+torch==2.4.1
+torchvision==0.19.1
+gunicorn==23.0.0
+Flask==3.1.0
