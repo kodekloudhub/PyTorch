@@ -27,4 +27,4 @@ ____ ____
 ____ 8000
 
 # Command to run the app
-____ ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:app"]
+____ ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "--preload", "app:app"]
