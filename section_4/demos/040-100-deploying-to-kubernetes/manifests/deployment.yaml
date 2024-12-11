@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-model-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ml-model
+  template:
+    metadata:
+      labels:
+        app: ml-model
+    spec:
+      containers:
+      - name: ml-model-container
+        image: wbassler/mobilenetv3lg-flask:v1.0
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "250Mi"
+          limits:
+            cpu: "200m"
+            memory: "250Mi"
