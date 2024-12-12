@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: breast-cancer-classifier-deployment
+spec:
+  selector:
+    matchLabels:
+      app: breast-cancer-classifier
+  template:
+    metadata:
+      labels:
+        app: breast-cancer-classifier
+    spec:
+      containers:
+      - name: image-classifier
+        image: wbassler/breast-cancer-classifier:v1.0
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "250Mi"
+          limits:
+            cpu: "200m"
+            memory: "250Mi"
