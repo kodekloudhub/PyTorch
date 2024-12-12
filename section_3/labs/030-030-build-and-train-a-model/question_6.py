@@ -28,6 +28,8 @@ for epoch in range(N_EPOCHS):
     # Loop over the training data in batches
     for i, data in enumerate(train_dataloader, 0):
         inputs, labels = data
+        # Set labels for binary float
+        labels = labels.unsqueeze(1).float()
         # Clear the gradients for the optimizer
         ____.____
         # Get model predictions    
