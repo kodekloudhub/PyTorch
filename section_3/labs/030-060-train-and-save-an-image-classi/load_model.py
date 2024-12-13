@@ -11,3 +11,5 @@ model = ____
 checkpoint = ____.____("____", weights_only='true')
 # Load the parameters to our model
 ____.____(checkpoint['____'])
+# Print the model
+print(model)

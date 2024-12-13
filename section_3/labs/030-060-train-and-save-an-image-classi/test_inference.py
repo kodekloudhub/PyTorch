@@ -19,4 +19,4 @@ model.____
 # Perform inference
 output = ____(transformed_image)
 # Print the prediction
-print(output)
+print(f"Prediction: {output}")
