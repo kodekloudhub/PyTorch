@@ -23,3 +23,5 @@ checkpoint = torch.____('mobilenet_checkpoint.tar', weights_only=True)
 
 # Load the parameters from the checkpoint
 model.____(____['model_state_dict']) 
+# Print the model
+print(model)

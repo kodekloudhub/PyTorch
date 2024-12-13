@@ -23,3 +23,5 @@ checkpoint = torch.____('resnet_checkpoint.tar', weights_only=True)
 
 # Load the model parameters from the checkpoint
 model.____(____['model_state_dict']) 
+# Print the model
+print(model)
