@@ -1,8 +1,4 @@
-# Demo for 040-070-introduction-to-docker
-```bash
-git clone https://github.com/kodekloudhub/PyTorch.git
-```
-
+# Demo for 040-100-deploying-to-kubernetes
 ```bash
 bash PyTorch/section_4/demos/040-100-deploying-to-kubernetes/setup.sh
 ```

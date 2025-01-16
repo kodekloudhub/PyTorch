@@ -1,23 +1,19 @@
 #!/bin/bash
 
-# Set hostname
-hostname pytorch
+# Install metric server
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
-# data directory
-mkdir -pv PyTorch/data
+# update deployment
+kubectl patch -n kube-system deployment metrics-server --type=json \
+  -p '[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
 
 # install Python
 apt-get update && \ 
     apt-get install -y python3 python3-pip python3-venv
+pip3 install requests
 
-# Additional packages
-apt-get install -y ffmpeg libsm6 libxext6
-
-# Activate python environment
-python3 -m venv venv
-source venv/bin/activate
-    
-pip3 install -r PyTorch/requirements.txt
+# Download the repo
+git clone https://github.com/kodekloudhub/PyTorch.git
 
 # Install and start code server
 curl -fsSL https://code-server.dev/install.sh | sh
