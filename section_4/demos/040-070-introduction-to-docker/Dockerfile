@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /opt/app
 
 # Install CPU versions of PyTorch
-#RUN pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
+# RUN pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
 
 # Copy requirements and install dependencies
 COPY requirements.txt .
@@ -27,4 +27,4 @@ USER pytorch
 EXPOSE 8000
 
 # Command to run the app
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "--preload", "app:app"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8000"]
